@@ -1,0 +1,72 @@
+/* ****************** ABOUT US ************** */
+#aboutus
+	@extend .pinkBackground
+	padding: 115px 0 95px
+
+#aboutusCarousel
+	margin-top: 60px
+	max-width: 100%
+	@include sprite-dimensions($about-icons, slider1-a)
+
+.aboutusCarouselSlideStyle
+	p
+		@include sprite-dimensions($about-icons, slider1-a)
+		margin: 0
+
+.aboutusCarousel2SlideStyle
+	p
+		@include sprite-dimensions($about-icons, slider2-a)
+		margin: 0
+
+
+#aboutus-slideA
+	@extend .aboutusCarouselSlideStyle
+	p
+		@extend .col-img
+		background: sprite($about-icons, slider1-a)
+
+#aboutus-slideB
+	@extend .aboutusCarouselSlideStyle
+	p
+		@extend .col-img
+		background: sprite($about-icons, slider1-b)
+
+#aboutus-slideC
+	@extend .aboutusCarouselSlideStyle
+	p
+		@extend .col-img
+		background: sprite($about-icons, slider1-c)
+
+#aboutus-slideD
+	@extend .aboutusCarouselSlideStyle
+	p
+		@extend .col-img
+		background: sprite($about-icons, slider1-d)
+
+#aboutusCarousel2
+	max-width: 100%
+	@include sprite-dimensions($about-icons, slider2-a)
+
+#aboutus2-slideA
+	@extend .aboutusCarousel2SlideStyle
+	p
+		@extend .col-img
+		background: sprite($about-icons, slider2-a)
+
+#aboutus2-slideB
+	@extend .aboutusCarousel2SlideStyle
+	p
+		@extend .col-img
+		background: sprite($about-icons, slider2-b)
+
+#aboutus2-slideC
+	@extend .aboutusCarousel2SlideStyle
+	p
+		@extend .col-img
+		background: sprite($about-icons, slider2-c)
+
+#professionaToolsImage
+	@extend .img
+	background: sprite($about-icons, about-professional-tools)
+	@include sprite-dimensions($about-icons, about-professional-tools)
+	margin: -25px 0 37px

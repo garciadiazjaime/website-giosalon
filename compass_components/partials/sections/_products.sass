@@ -1,0 +1,40 @@
+/* ****************** PRODUCTS ************** */
+#productos
+	padding: 0 0 85px
+
+	h2
+		font-size: 40px
+		margin-bottom: 53px
+		text-align: center
+
+.logo
+	@extend .img
+	margin: 0 auto
+
+#productsCarousel
+	.carousel-inner
+		height: 285px
+
+	p
+		@extend .logo
+
+
+p#kerastaseLogo
+	background: sprite($mobile-icons, products-kerastase)
+	@include sprite-dimensions($mobile-icons, products-kerastase)
+	margin-top: 87px
+
+p#sebastianLogo
+	background: sprite($mobile-icons, products-sebastian)
+	@include sprite-dimensions($mobile-icons, products-sebastian)
+	margin-top: 73px
+
+p#lorealLogo
+	background: sprite($mobile-icons, products-loreal)
+	@include sprite-dimensions($mobile-icons, products-loreal)
+	margin-top: 93px
+
+p#macLogo
+	background: sprite($mobile-icons, products-mac)
+	@include sprite-dimensions($mobile-icons, products-mac)
+	margin-top: 107px

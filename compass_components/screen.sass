@@ -1,0 +1,541 @@
+@import "partials/_setup"
+@import "partials/_reset"
+
+/* ****************** GENERAL ************** */
+
+html, body
+	background: white
+
+body
+	color: $black
+	@extend %gotham
+	font-size: 14px 
+	letter-spacing: 0.07em
+	line-height: 1.4em
+	padding: 0
+
+a
+	color: $black
+	font-weight: normal
+
+	&:hover, &:focus, &:active
+		color: lighten($black, 20)
+		text-decoration: none
+
+h2, h3
+	color: $black
+	@extend %lato
+	font-size: 45px
+	font-weight: normal
+	letter-spacing: 0.05em
+	margin: 0 0 15px
+	text-transform: uppercase
+
+h3
+	font-size: 16px
+
+em
+	@extend %montserrat
+	font-style: normal
+
+/* ****************** LAYOUT ************** */
+#mainContent
+	padding: 0
+
+section
+	max-width: 100%
+	overflow: hidden
+
+.container
+	max-width: 980px
+
+.twoColumns
+	max-width: 100%
+	overflow: hidden
+
+.long-wrap
+	max-width: 516px
+
+.col-xs-12:last-child
+	.long-wrap
+		margin: 0 0 0 auto
+
+select
+	background: transparent
+	border: none
+	font-size: 16px
+	height: 100%
+	padding: 5px 15px 5px 0
+	position: relative
+	-webkit-appearance: none
+	width: 110%
+	z-index: 5
+
+	&:hover
+		cursor: pointer
+
+.btn
+	background: $gray
+	border: none
+	@include border-radius(0)
+	color: $black
+	display: inline-block
+	font-size: 13px
+	letter-spacing: 0.06em
+	margin: 30px 0 10px
+	padding: 17px 20px
+	text-align: center
+	width: 100%
+
+	&:hover, &:focus, &:active
+		background: darken($gray, 5)
+		color: $black
+
+.btn-default:active:hover, .btn-default:active:focus
+	background: darken($gray, 5)
+	color: $black
+
+.pinterestButton
+	@extend .btn
+	background: $gray
+	@include border-radius(50px)
+	font-size: 10px
+	line-height: 1em
+	margin: 15px 0
+	min-width: 175px
+	padding: 14px 37px 14px 14px
+	text-align: left
+	position: relative
+	@include transition(.4s)
+	width: auto
+
+	&:after
+		background: sprite($general-icons, pinterest)
+		@include sprite-dimensions($general-icons, pinterest)
+		@include sprite-at2x($general-icons, $general2x-icons)
+		content: " "
+		display: block
+		position: absolute
+		right: 13px
+		top: 5px
+		z-index: 5
+
+	&:hover, &:focus, &:active
+		background: #bd081c
+		color: white
+
+.facebookButton
+	@extend .pinterestButton
+
+	&:before
+		background: #0074c8
+		@include border-radius(50px)
+		content: " "
+		display: block
+		height: 24px
+		position: absolute
+		right: 9px
+		top: 6px
+		width: 24px
+		z-index: 4
+
+	&:after
+		background: sprite($general-icons, facebook)
+		@include sprite-dimensions($general-icons, facebook)
+		right: 18px
+		top: 13px
+
+	&:hover, &:focus, &:active
+		background: #0074c8
+
+.social
+	list-style-type: none
+	margin: 0
+	padding: 0
+
+	li
+		display: inline-block
+		margin: 0 0 0 15px
+
+	li:first-child
+		margin-left: 0
+
+	a
+		background: #0074c8
+		@include border-radius(50px)
+		display: block
+		height: 24px
+		overflow: hidden
+		position: relative
+		@include transition(.4s)
+		width: 24px
+
+		&:hover, &:focus, &:active
+			background: darken(#0074c8, 10)
+			@include transition(.4s)
+
+	span
+		background: sprite($general-icons, facebook)
+		@include sprite-dimensions($general-icons, facebook)
+		@include sprite-at2x($general-icons, $general2x-icons)
+		display: block
+		margin: 7px auto 0
+		line-height: 5000em
+		overflow: hidden
+
+.hasBackground
+	color: white
+
+	h2
+		color: white
+		
+.grayBackground
+	background: $gray
+
+.pinkBackground
+	@extend .hasBackground
+	background: $pink
+
+.blackBackground
+	@extend .hasBackground
+	background: black
+
+.carousel-indicators
+	display: none
+
+.glyphicon-chevron-left, .glyphicon-chevron-right
+	&:before
+		border-top: 10px solid transparent
+		border-bottom: 10px solid transparent
+		height: 0
+		width: 0
+
+.glyphicon-chevron-left
+	&:before
+		border-right: 10px solid $pink
+		content: ""
+
+.glyphicon-chevron-right
+	&:before
+		border-left: 10px solid $pink
+		content: ""
+
+.carousel-control
+	opacity: 1
+
+	&:hover, &:focus
+		opacity: 1
+
+		.glyphicon-chevron-right:before
+			border-left-color: #f982a4
+
+		.glyphicon-chevron-left:before
+			border-right-color: #f982a4
+
+	.glyphicon-chevron-left, .glyphicon-chevron-right, .icon-prev, .icon-next
+		font-size: 0
+
+.img
+	display: block
+	line-height: 5000em
+	overflow: hidden
+	width: 100%
+
+.col-img
+	@extend .img
+	max-width: 462px
+
+.smallCol-img
+	@extend .img
+	max-width: 185px
+
+.mediumCol-img
+	@extend .img
+	max-width: 253px
+
+.has-desktop-decoration
+	position: relative
+
+	&:before
+		content: " "
+		display: block
+		left: 0
+		position: absolute
+		top: 0
+		width: 100%
+		z-index: 1
+
+	.container
+		position: relative
+		z-index: 5
+
+.boxStyle
+	margin: 37px 0 30px
+	padding: 0
+	position: relative
+
+	p
+		color: white
+		font-size: 16px
+		margin: 0
+		padding: 30px 25px 30px 187px
+		position: relative
+		word-wrap: break-word
+		z-index: 1
+
+	span
+		display: block
+		left: 0
+		position: absolute
+		top: 0
+		z-index: 5
+
+.leftboxStyle
+	@extend .boxStyle
+	padding: 18px 0 0
+
+	p
+		height: 155px
+		padding: 30px 187px 30px 25px
+
+	span
+		left: auto
+		right: 0
+
+
+.pinkBox
+	@extend .boxStyle		
+	p
+		background: $pink
+		
+
+.leftPinkBox
+	@extend .leftboxStyle		
+	p
+		background: $pink
+
+.yellowBox		
+	@extend .boxStyle
+	p
+		background: #e7e40f
+		color: $black
+
+.blueBox		
+	@extend .leftboxStyle
+
+	p
+		background: #00b5ff
+
+/* ****************** HEADER ************** */	
+header, #header
+	background: transparent
+	font-size: 13px
+	left: 0
+	letter-spacing: 0.07em
+	overflow: hidden
+	padding: 30px 0 40px
+	position: absolute
+	top: 0
+	width: 100%
+
+	.container
+		position: relative
+		text-align: right
+
+	.social
+		position: absolute
+		right: 15px
+		top: 19px
+		z-index: 5
+
+.brand-style
+	display: block
+	left: 15px
+	line-height: 5000em
+	overflow: hidden
+	position: absolute
+	top: 0
+	z-index: 5
+
+#brand, .navbar-brand
+	@extend .brand-style
+	background: sprite($general-icons, logo-white)
+	@include sprite-dimensions($general-icons, logo-white)
+	@include sprite-at2x($general-icons, $general2x-icons)
+	margin: 0
+	opacity: 1
+	padding: 0
+	top: 7px
+
+	&:hover, &:focus, &:active
+		cursor: pointer
+		opacity: .7
+
+#navbar
+	padding: 0 40px 0 0
+	text-align: right
+
+.navbar-nav
+	@include border-radius(0)
+	display: inline-block
+	float: none
+	padding-top: 10px
+	text-align: center
+	z-index: 1000
+
+	li
+		&:first-child	
+			display: none
+
+.navbar-default .navbar-nav > li > a
+	color: white
+
+.navbar-default
+	.navbar-collapse
+		margin-right: 40px
+
+.navbar-nav
+	margin-right: 40px
+
+.navbar-nav > li > a
+	padding: 14px 0
+
+	&:hover, &:focus, &:active
+		color: $black
+
+	.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus
+		color: $black	
+
+.navbar-default
+	.navbar-toggle	
+		border-color: white
+		margin-right: 65px
+
+		.icon-bar
+			background-color: white
+
+		&:hover, &:focus
+			background: white
+			
+			.icon-bar
+				background-color: $pink
+
+header.fixed, #header.fixed
+	background: white
+	font-size: 14px
+	padding: 0
+	position: fixed
+	width: 100%
+	z-index: 50
+
+	#navbar
+		padding: 0
+
+	.navbar-nav
+		margin-right: 0
+		padding-top: 10p
+
+	#brand, .navbar-brand
+		background: sprite($general-icons, logo)
+		@include sprite-dimensions($general-icons, logo)
+
+	.social
+		display: none	
+
+	.navbar-nav > li > a
+		color: black
+		padding: 22px 0 0	
+
+		&:hover, &:focus, &:active
+			color: $pink
+
+	.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus
+		color: $pink
+
+	.container > .navbar-header
+		min-height: 80px
+
+	.navbar-default
+		.navbar-toggle		
+			border-color: #ebe9ea
+
+			.icon-bar
+				background-color: #ebe9ea
+
+			&:hover, &:focus
+				background: #ebe9ea
+				
+				.icon-bar
+					background-color: white
+
+	.navbar-toggle
+		margin-right: 25px
+
+/* ****************** FOOTER ************** */
+footer, #footer
+	background: $black
+	color: white
+	font-size: 10px
+	padding: 60px 0 20px
+	text-align: center
+
+	a
+		color: white
+		display: inline-block
+		padding: 0 5px
+
+		&:hover, &:focus, &:active
+			color: $pink
+
+#footerNavigation
+	font-size: 12px
+	margin: 0 0 70px
+	padding: 26px 0 28px 145px
+	position: relative
+
+	a
+		color: white
+
+		&:hover, &:focus, &:active
+			color: $pink
+
+
+	&:before
+		background: sprite($general-icons, logo-big)
+		@include sprite-dimensions($general-icons, logo-big)
+		@include sprite-at2x($general-icons, $general2x-icons)
+		content: ""
+		display: block
+		left: 0
+		position: absolute
+		top: 0
+
+
+	ul
+		list-style-type: none
+		margin: 0
+		padding: 0
+		text-align: center
+
+	li
+		display: inline-block
+		margin:  0 0 0 25px
+
+	li:first-child
+		margin-left: 0
+
+
+/* ****************** SECTIONS ************** */
+
+@import "partials/sections/_home"
+@import "partials/sections/_about"
+@import "partials/sections/_haircuts"
+@import "partials/sections/_haircolor"
+@import "partials/sections/_hairstyle"
+@import "partials/sections/_makeup"
+@import "partials/sections/_bride"
+@import "partials/sections/_boutique"
+@import "partials/sections/_products"
+@import "partials/sections/_contact"
+
+@import "partials/_responsive"

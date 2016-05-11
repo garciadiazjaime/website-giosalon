@@ -1,0 +1,56 @@
+/* ****************** BRIDE ************** */
+
+#brides
+	.container
+		position: relative
+
+#brideCarousel
+	max-width: 100%
+	position: relative
+	z-index: 1
+
+	.carousel-control.left
+		left: -15%
+
+	.carousel-control.right
+		right: -15%
+	p
+		@extend .img
+		@include sprite-dimensions($mobile-icons, bride-sample)
+		margin: 0 auto
+
+#bride-sample1
+	p
+		background: sprite($mobile-icons, bride-sample)
+
+#bride-sample2
+	p
+		background: sprite($mobile-icons, bride-sample2)
+
+#bride-sample3
+	p
+		background: sprite($mobile-icons, bride-sample3)
+
+#bride-sample4
+	p
+		background: sprite($mobile-icons, bride-sample4)
+
+#brideFixedBlock
+	position: absolute
+	right: 0
+	top: 150px
+	max-width: 100%
+	width: 360px
+	z-index: 5
+
+	.pinterestButton
+		display: block
+		margin: 15px 0 15px auto
+		width: 195px
+
+.darkPinkBox
+	background: #c50070
+	color: white
+	font-size: 18px
+	padding: 45px 43px
+	word-wrap: break-word

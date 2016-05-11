@@ -1,0 +1,218 @@
+/* ****************** CONTACT ************** */
+#contact
+	h3
+		color: white
+		@extend %gotham
+		font-size: 14px
+		margin: 35px 0 10px
+		text-transform: none
+
+#map
+	height: 535px
+	position: relative
+
+	a
+		background: url(#{$img}map.png) center no-repeat
+		background-size: cover
+		display: block
+		height: 100%
+		opacity: 1
+		@include transition(.4s)
+		width: 100%
+
+		&:hover, &:focus, &:active
+			opacity: .7
+
+			span
+				background: $pink
+				@include transition(.4s)
+
+	span
+		background: $black
+		border: none
+		border-right: 5px solid $pink
+		bottom: 60px
+		color: white
+		display: block
+		font-size: 12px
+		left: 50%
+		margin: 0 0 0 -100px
+		padding: 9px 30px 9px 10px
+		position: absolute
+		@include transition(.4s)
+		width: 200px	
+
+		&:after	
+			border-top: 4px solid transparent
+			border-left: 4px solid white
+			border-bottom: 4px solid transparent	
+			content: ""
+			display: block
+			height: 0
+			position: absolute
+			right: 10px
+			top: 15px
+			width: 0
+
+.twoColumns
+	background: white
+	margin-top: -5px
+
+	h2
+		font-size: 30px
+		margin: 0 0 12px
+
+	.col-xs-12:first-child
+		h2
+			margin-bottom: 30px
+
+		.twoColumns-wraper
+			margin: 0 72px 0 auto
+
+		a
+			color: white
+
+			&:hover, &:focus, &:active
+				color: $black
+
+		h3, p
+			max-width: 260px
+
+		.email
+			display: block
+			margin-top: 30px
+
+
+.twoColumns-wraper
+	margin: 0 auto 0 72px
+	max-width: 80%
+	min-height: 530px
+	padding: 52px 0 26px
+	position: relative
+	width: 408px
+
+.sidenote
+	color: $pink
+	display: block
+	font-size: 14px
+	margin-bottom: 33px
+
+.formGroup
+	border-bottom: 1px solid #c6c6c6
+	position: relative
+
+	input
+		background: white
+		border: none
+		height: 25px
+		padding: 2px 5px 2px 85px
+		position: relative
+		width: 100%
+		z-index: 1
+
+input
+	font-size: 11px
+
+label
+	color: #231f20
+	font-size: 12px
+	left: 0
+	position: absolute
+	top: 3px
+	z-index: 5
+
+label.static
+	display: block
+	position: static
+
+textarea
+	border: none
+	border-bottom: 1px solid #c6c6c6
+	display: block
+	width: 100%
+
+#contactForm
+	.col-xs-12
+		label
+			border-bottom: 1px solid #c6c6c6
+			display: block
+			margin-top: 4px
+			position: static
+
+		input
+			border: none
+			border-bottom: 1px solid #c6c6c6
+			padding-left: 5px
+			position: static
+			width: 100%
+
+
+.selectWraper
+	background: white
+	height: 25px
+	margin: 0
+	overflow: hidden
+	padding: 0 0 0 85px
+	position: relative
+	width: 100%
+
+	&:before //arrow
+		border-left: 5px solid transparent
+		border-right: 5px solid transparent
+		border-top: 5px solid $pink	
+		content: ""
+		display: block
+		height: 0
+		position: absolute
+		right: 0
+		top: 9px
+		width: 0
+		z-index: 3
+
+	option
+		background: white
+
+	select
+		font-size: 10px
+
+#submitButton
+	background: $black
+	border: none
+	border-right: 5px solid $pink
+	color: white
+	display: block
+	font-size: 12px
+	margin: 38px 0 15px auto
+	padding: 5px 30px 5px 10px
+	position: relative
+	@include transition(.4s)
+	width: 130px	
+
+	&:after	
+		border-top: 4px solid transparent
+		border-left: 4px solid white
+		border-bottom: 4px solid transparent	
+		content: ""
+		display: block
+		height: 0
+		position: absolute
+		right: 10px
+		top: 10px
+		width: 0	
+
+	&:hover, &:focus, &:active
+		background: $pink
+		@include transition(.4s)
+
+#msg
+	color: $black
+	display: block
+	font: 10px Verdana, sans-serif
+	height: 15px
+	margin: 10px 0
+
+#msg.text-error, label.text-error
+	color: #aa1a21
+
+#msg.text-success
+	color: #42895e

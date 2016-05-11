@@ -1,0 +1,63 @@
+/* ****************** BOUTIQUE ************** */
+
+#boutique
+	padding: 105px 0 130px
+
+	h2
+		font-size: 50px
+		margin-bottom: 85px
+		text-align: center
+
+		span
+			display: inline-block
+			vertical-align: baseline
+
+		span:first-child
+			background: sprite($general-icons, essenza)
+			@include sprite-dimensions($general-icons, essenza)
+			line-height: 5000em
+			margin: 0 25px 0 0
+			overflow: hidden
+
+
+#boutiqueImage
+	@extend .img
+	background: sprite($boutique-icons, boutique-featured)
+	@include sprite-dimensions($boutique-icons, boutique-featured)
+	max-width: 100%
+
+.aquaBox
+	background: #37ccc8
+	color: white
+	font-size: 17px
+	margin: 0
+	padding: 35px 25px 55px
+	word-wrap: break-word
+
+#boutiqueCarousel
+	@include sprite-dimensions($boutique-icons, boutique-sample)
+	max-width: 100%
+	p
+		@extend .mediumCol-img
+		@include sprite-dimensions($boutique-icons, boutique-sample)
+		margin: 0
+
+#boutique-sample1
+	p
+		background: sprite($boutique-icons, boutique-sample)
+
+#boutique-sample2
+	p
+		background: sprite($boutique-icons, boutique-sample2)
+
+#boutique-sample3
+	p
+		background: sprite($boutique-icons, boutique-sample3)
+
+#boutique-sample4
+	p
+		background: sprite($boutique-icons, boutique-sample4)
+
+#boutique-sample5
+	p
+		background: sprite($boutique-icons, boutique-sample5)

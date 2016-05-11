@@ -1,0 +1,45 @@
+/* ****************** MAKEUP ************** */
+#makeup
+	@extend .blackBackground
+	@extend .has-desktop-decoration
+	padding: 60px 0
+
+	.container > .row
+		.col-xs-12:first-child
+			position: relative
+			z-index: 5
+
+#generalMakeupImage
+	@extend .img
+	background: sprite($makeup-icons, makeup-general)
+	@include sprite-dimensions($makeup-icons, makeup-general)
+
+#makeupCarousel
+	@include sprite-dimensions($makeup-icons, makeup-sample)
+	margin-top: 50px
+	max-width: 100%
+	p
+		@extend .mediumCol-img
+		@include sprite-dimensions($makeup-icons, makeup-sample)
+		margin: 0
+
+#makeup-sample1
+	p
+		background: sprite($makeup-icons, makeup-sample)
+
+#makeup-sample2
+	p
+		background: sprite($makeup-icons, makeup-sample2)
+
+#makeup-sample3
+	p
+		background: sprite($makeup-icons, makeup-sample3)
+
+#featuredMakeupImage
+	@extend .smallCol-img
+	background: sprite($makeup-icons, makeup-featured)
+	@include sprite-dimensions($makeup-icons, makeup-featured)
+
+#brushImage
+	@extend .img
+	height: 0

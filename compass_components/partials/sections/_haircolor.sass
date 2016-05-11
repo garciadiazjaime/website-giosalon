@@ -1,0 +1,53 @@
+/* ****************** HAIRCOLOR ************** */
+
+#color
+	@extend .grayBackground
+	@extend .has-desktop-decoration
+	padding: 60px 0 60px
+
+	.pinterestButton
+		background: white
+
+		&:hover, &:focus, &:active
+			background: #bd081c
+
+	.container > .row
+		.col-xs-12:first-child
+			position: relative
+			z-index: 5
+
+#hairColorCarousel
+	@include sprite-dimensions($haircolor-icons, haircolor-sample)
+	margin-top: 90px
+	max-width: 100%
+	p
+		@extend .mediumCol-img
+		@include sprite-dimensions($haircolor-icons, haircolor-sample)
+		margin: 0
+
+#generalHairColorImage
+	@extend .img
+	background: sprite($haircolor-icons,haircolor-general)
+	@include sprite-dimensions($haircolor-icons, haircolor-general)
+
+#hairColor-sample1
+	p
+		background: sprite($haircolor-icons, haircolor-sample)
+
+#hairColor-sample2
+	p
+		background: sprite($haircolor-icons, haircolor-sample2)
+
+#hairColor-sample3
+	p
+		background: sprite($haircolor-icons, haircolor-sample3)
+
+#featuredHairColorImage
+	@extend .smallCol-img
+	background: sprite($haircolor-icons, haircolor-featured)
+	@include sprite-dimensions($haircolor-icons, haircolor-featured)
+	max-width: 100%
+
+#colorBrushImage
+	@extend .img
+	height: 0

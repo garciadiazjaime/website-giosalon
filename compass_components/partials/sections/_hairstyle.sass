@@ -1,0 +1,44 @@
+/* ****************** HAIRSTYLE ************** */
+#hairstyle
+	@extend .has-desktop-decoration
+	padding: 60px 0 60px
+
+	.container > .row > .col-xs-12:first-child
+		position: relative
+
+#hairdryerImage
+	@extend .img
+	height: 0
+
+#generalHairstyleImage
+	@extend .mediumCol-img
+	background: sprite($hairstyle-icons, hairstyle-general)
+	@include sprite-dimensions($hairstyle-icons, hairstyle-general)
+
+#hairstyleCarousel
+	@include sprite-dimensions($hairstyle-icons, hairstyle-sample)
+	max-width: 100%
+	width: hairstyle-sprite-width(hairstyle-sample)
+
+	p
+		@extend .img
+		@include sprite-dimensions($hairstyle-icons, hairstyle-sample)
+		margin: 0
+
+#hairstyle-sample1
+	p
+		background: sprite($hairstyle-icons, hairstyle-sample)
+
+#hairstyle-sample2
+	p
+		background: sprite($hairstyle-icons, hairstyle-sample2)
+
+#hairstyle-sample3
+	p
+		background: sprite($hairstyle-icons, hairstyle-sample3)
+
+#featuredHairstyleImage
+	@extend .img
+	background: sprite($hairstyle-icons, hairstyle-featured)
+	@include sprite-dimensions($hairstyle-icons, hairstyle-featured)
+	max-width: 100%

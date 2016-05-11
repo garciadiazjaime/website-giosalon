@@ -1,0 +1,48 @@
+/* ****************** HAIRCUTS ************** */
+#haircuts
+	@extend .has-desktop-decoration
+	padding: 60px 0
+
+#scissorsImage
+	@extend .img
+	height: 0
+
+#generalHaircutsImage
+	@extend .col-img
+	background: sprite($haircuts-icons, haircuts-featured)
+	@include sprite-dimensions($haircuts-icons, haircuts-featured)
+
+#maleCutsCarousel, #femaleCutsCarousel
+	@include sprite-dimensions($haircuts-icons, haircuts-male-haircut)
+	margin: 0 auto 20px
+	max-width: 100%
+
+	p
+		@extend .col-img
+		@include sprite-dimensions($haircuts-icons, haircuts-male-haircut)
+		margin: 0
+
+#maleCuts-haistyle1
+	p
+		background: sprite($haircuts-icons, haircuts-male-haircut)
+
+#maleCuts-haistyle2
+	p
+		background: sprite($haircuts-icons, haircuts-male-haircut2)
+
+#maleCuts-haistyle3
+	p
+		background: sprite($haircuts-icons, haircuts-male-haircut3)
+
+#femaleCuts-haistyle1	
+	p
+		background: sprite($haircuts-icons, haircuts-female-haircut)
+#femaleCuts-haistyle2	
+	p
+		background: sprite($haircuts-icons, haircuts-female-haircut2)
+#femaleCuts-haistyle3	
+	p
+		background: sprite($haircuts-icons, haircuts-female-haircut3)
+#femaleCuts-haistyle4	
+	p
+		background: sprite($haircuts-icons, haircuts-female-haircut4)

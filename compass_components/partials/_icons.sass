@@ -1,0 +1,58 @@
+@import "general/*.png"
+@include all-general-sprites
+$general-icons: sprite-map("general/*.png", $layout: smart)
+
+@import "general2x/*.png"
+@include all-general2x-sprites
+$general2x-icons: sprite-map("general2x/*.png", $layout: smart)
+
+@import "desktop/*.png"
+@include all-desktop-sprites
+$desktop-icons: sprite-map("desktop/*.png", $layout: vertical)
+
+@import "mobile/*.png"
+@include all-mobile-sprites
+$mobile-icons: sprite-map("mobile/*.png", $layout: smart)
+
+@import "desktop2x/*.png"
+@include all-desktop2x-sprites
+$desktop2x-icons: sprite-map("desktop2x/*.png", $layout: vertical)
+
+@import "tablet/*.png"
+@include all-tablet-sprites
+$tablet-icons: sprite-map("tablet/*.png", $layout: smart)
+
+@import "about/*.png"
+@include all-about-sprites
+$about-icons: sprite-map("about/*.png", $layout: smart)
+
+@import "boutique/*.png"
+@include all-boutique-sprites
+$boutique-icons: sprite-map("boutique/*.png", $layout: smart)
+
+@import "bride/*.png"
+@include all-bride-sprites
+$bride-icons: sprite-map("bride/*.png", $layout: smart)
+
+@import "haircolor/*.png"
+@include all-haircolor-sprites
+$haircolor-icons: sprite-map("haircolor/*.png", $layout: smart)
+
+@import "haircuts/*.png"
+@include all-haircuts-sprites
+$haircuts-icons: sprite-map("haircuts/*.png", $layout: smart)
+
+@import "hairstyle/*.png"
+@include all-hairstyle-sprites
+$hairstyle-icons: sprite-map("hairstyle/*.png", $layout: smart)
+
+@import "makeup/*.png"
+@include all-makeup-sprites
+$makeup-icons: sprite-map("makeup/*.png", $layout: smart)
+
+@import "products/*.png"
+@include all-products-sprites
+$products-icons: sprite-map("products/*.png", $layout: smart)
+
+.icon-holder
+	position: relative

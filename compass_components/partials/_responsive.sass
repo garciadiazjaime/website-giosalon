@@ -1,0 +1,487 @@
+/* *************** GENERAL *************** */
+@media screen and (min-width: 500px) and (max-width: 767px)
+	.col-xs-12:last-child
+		.long-wrap
+			margin: 0 auto
+
+@media screen and (max-width: 767px)
+	#appointmentWrap
+		#telAppointmentButton
+			display: inline-block
+
+@media screen and (max-width: 510px)
+	#appointmentWrap
+		a
+			font-size: 12px
+			padding: 15px 5px
+
+			span
+				padding: 0 17px 0 0
+
+@media screen and (max-width: 450px)
+	.boxStyle
+		padding: 155px 0 0 !important
+
+		p
+			height: auto !important
+			padding: 30px 25px !important
+		span
+			margin: 0 0 0 25px !important
+
+@media screen and (max-width: 419px)
+	.leftboxStyle, .leftPinkBox, .blueBox
+		p
+			height: auto
+			word-wrap: break-word
+
+@media screen and (max-width: 305px)
+	#appointmentWrap
+		a
+			span
+				padding: 0 10px 0 0
+
+/* *************** HEADER *************** */
+@media screen and (max-width: 767px)
+	header, #header
+		padding: 5px 0 40px
+
+/* -------- NAVIGATION --------- */
+
+@media screen and (max-width: 767px)
+	header, #header
+		.container
+			padding: 0
+
+	.navbar-nav
+		display: block
+		margin: 0
+		padding: 0
+
+	.navbar-toggle
+		margin-right: 55px
+		margin-top: 15px
+
+	#navbar
+		text-align: center
+
+		ul
+			margin: 0
+			width: 100%
+
+	.navbar-default
+		.navbar-collapse
+			margin-right: 0
+			padding: 0
+			position: relative
+			z-index: 10
+
+
+	header, #header, header.fixed, #header.fixed
+		.navbar-nav > li > a
+			background: white
+			color: $black
+
+			&:hover, &:focus, &:active
+				background: $pink
+				color: white
+
+		.navbar-nav
+			margin: 0
+
+	header.fixed, #header.fixed
+		#brand, .navbar-brand
+			left: 50%
+			margin-left: -(general-sprite-width(logo)/2)
+			top: 2px
+
+		.navbar-nav
+			padding-top: 0
+
+@media screen and (min-width: 768px)
+	.navbar-nav
+		li
+			margin-left: 10px
+
+@media screen and (min-width: 992px)
+	.navbar-nav
+		li
+			margin-left: 35px
+
+
+/* *************** FOOTER *************** */
+
+@media screen and (max-width: 500px)
+	#footerNavigation
+		margin: 0 0 20px
+		padding: 26px 0 28px
+
+		&:before
+			margin: 0 auto 40px
+			position: static
+
+		li
+			margin: 0 0 15px
+			width: 33%
+
+			a
+				display: block
+
+@media screen and (max-width: 380px)
+	#footerNavigation
+		li
+			width: 50%
+
+/* *************** HOME *************** */
+
+@media screen and (min-width: 500px)
+	#mainPhrase
+		color: $pink
+
+
+@media screen and (min-width: 768px)
+	#home
+		&:after
+			background: sprite($desktop-icons, banner-corner)
+			@include sprite-dimensions($desktop-icons, banner-corner)
+			@include sprite-at2x($desktop-icons, $desktop2x-icons)
+			bottom: 0
+			content: " "
+			left: 0
+			position: absolute
+			z-index: 1
+
+		.container
+			position: static
+			
+			&:before
+				background: url(#{$img}woman-banner.png) 0 0 no-repeat
+				content: " "
+				display: block
+				height: 760px
+				left: 50%
+				margin: 0 0 0 -225px
+				position: absolute
+				top: 0
+				width: 870px
+				z-index: 2
+
+			&:after
+				background: $pink
+				content: " "
+				display: block
+				height: 760px
+				position: absolute
+				left: 50%
+				top: 0
+				width: 100%
+				z-index: 1
+
+
+@media screen and (max-width: 767px)
+	#home
+		height: auto
+		padding: 145px 0 60px
+
+		&:before
+			height: 120px
+
+	#mainPhrase
+		margin: 0 0 30px
+		padding: 0
+		text-align: center
+
+@media screen and (max-width: 499px)
+	#mainPhrase
+		letter-spacing: 0.4em
+
+@media screen and (min-width: 500px) and (max-width: 767px)
+	#mainPhrase
+		span:last-child
+			color: $pink
+
+@media screen and (min-width: 768px) and (max-width: 991px)
+	#mainPhrase
+		padding: 200px 0 70px
+
+@media screen and (min-width: 767px) and (max-width: 992px)
+	#home
+		&:after
+			display: none
+
+@media screen and (min-width: 993px) and (max-width: 1282px)
+	#home
+		&:after
+			left: -150px
+
+@media screen and (min-width: 768px) and (max-width: 991px)
+	#mainPhrase
+		span:last-child
+			color: $pink
+
+/* *************** ABOUT US *************** */
+
+@media screen and (max-width: 767px)
+	#aboutusCarousel
+		margin: 60px auto 0
+
+	#aboutusCarousel2
+		margin: 0 auto
+
+	#professionaToolsImage
+		margin: -25px auto 37px
+
+	#hairWashImage
+		margin: 0 auto
+
+
+@media screen and (max-width: 550px)
+	#professionaToolsImage
+		margin: -25px 0 37px -30px
+
+@media screen and (max-width: 499px)
+	#professionaToolsImage
+		margin: -25px 0 37px -50px
+
+@media screen and (max-width: 459px)
+	#hairWashImage
+		max-width: 100%
+	
+@media screen and (max-width: 420px)
+	#professionaToolsImage
+		margin: -25px 0 37px -100px
+
+/* *************** HAIRCUTS *************** */
+
+@media screen and (min-width: 768px)
+	#haircuts
+		padding: 160px 0 0
+
+		&:before
+			background: sprite($desktop-icons, haircuts-decoration)
+			height: desktop-sprite-height(haircuts-decoration)
+			@include sprite-at2x($desktop-icons, $desktop2x-icons)
+			background-size: 100% image-height(sprite-path($desktop-icons))
+
+
+@media screen and (min-width: 500px)
+	#scissorsImage
+		background: sprite($tablet-icons, haircuts-tools)
+		@include sprite-dimensions($tablet-icons, haircuts-tools)
+		margin: -180px 0 -135px
+		position: relative
+		right: 40px
+
+@media screen and (min-width: 500px) and (max-width: 767px)
+	#scissorsImage
+		margin: -80px 0 -135px
+
+
+/* *************** HAIRCOLOR *************** */
+
+@media screen and (min-width: 768px)
+	#color
+		padding: 115px 0 0
+
+		&:before
+			background: sprite($desktop-icons, color-decoration)
+			height: desktop-sprite-height(color-decoration)
+			@include sprite-at2x($desktop-icons, $desktop2x-icons)
+			background-size: 100% image-height(sprite-path($desktop-icons))
+
+@media screen and (min-width: 500px)
+	#colorBrushImage	
+		background: sprite($tablet-icons, haircolor-brush)
+		@include sprite-dimensions($tablet-icons, haircolor-brush)
+		margin-top: -80px		
+
+@media screen and (min-width: 500px) and (max-width: 767px)
+	#featuredHairColorImage
+		max-width: 100%
+
+@media screen and (max-width: 767px)
+	#hairColorCarousel
+		margin: 90px auto 20px
+
+	#featuredHairColorImage
+		margin: 0 auto
+
+	#color
+		.row > .col-xs-12:first-child > .row > .col-xs-12:last-child
+			text-align: center
+
+/* *************** HAIRSTYLE *************** */
+
+@media screen and (min-width: 768px)
+	#hairstyle	
+		padding: 145px 0 0
+
+		&:before
+			background: sprite($desktop-icons, hairstyle-decoration)
+			height: desktop-sprite-height(hairstyle-decoration)
+			@include sprite-at2x($desktop-icons, $desktop2x-icons)
+			background-size: 100% image-height(sprite-path($desktop-icons))
+
+@media screen and (min-width: 500px)
+	#hairdryerImage
+		background: sprite($tablet-icons, hairstyle-hairdryer)
+		@include sprite-dimensions($tablet-icons, hairstyle-hairdryer)
+		position: absolute
+		right: -10px
+		top: -70px
+
+@media screen and (max-width: 767px)
+	#hairstyleCarousel
+		margin: 60px auto 0
+	#hairstyle
+		.col-sm-5
+			text-align: center
+
+	#featuredHairstyleImage
+		margin: 20px auto 0
+
+
+@media screen and (min-width: 500px) and (max-width: 767px)
+	#hairdryerImage
+		position: static
+		margin: -90px 0 0px -140px
+
+/* *************** MAKEUP *************** */
+@media screen and (max-width: 767px)
+	#makeupCarousel
+		margin: 50px auto 0
+
+	#featuredMakeupImage
+		margin: 20px auto 0
+
+	#makeup
+		.col-sm-5
+			text-align: center
+
+@media screen and (min-width: 768px)
+	#makeup
+		padding: 140px 0 0
+
+		&:before
+			background: sprite($desktop-icons, makeup-decoration)
+			height: desktop-sprite-height(makeup-decoration)
+			@include sprite-at2x($desktop-icons, $desktop2x-icons)
+			background-size: 100% image-height(sprite-path($desktop-icons))
+
+@media screen and (min-width: 500px)
+	#brushImage
+		background: sprite($tablet-icons, makeup-brush)
+		@include sprite-dimensions($tablet-icons, makeup-brush)
+		margin: -120px 0 0 -5px
+
+@media screen and (min-width: 500px) and (max-width: 767px)
+	#brushImage
+		margin: -33px auto 0
+
+/* *************** BRIDE *************** */
+
+@media screen and (max-width: 767px)
+	#brides
+		padding: 0 0 40px
+
+		.container
+			padding: 0
+
+	#brideFixedBlock
+		bottom: -30px
+		left: 50%
+		margin: 0 auto
+		position: static
+		right: auto
+		top: auto
+		width: 80%
+
+		.pinterestButton
+			margin: 15px auto
+
+	#brideCarousel
+
+		.carousel-control.left
+			left: 0
+
+		.carousel-control.right
+			right: 0
+
+@media screen and (min-width: 768px)
+	#brideFixedBlock
+		h2
+			text-align: right
+
+	#brideCarousel
+		p
+			@include sprite-dimensions($bride-icons, bride-sample)
+
+	#bride-sample1
+		p
+			background: sprite($bride-icons, bride-sample)
+
+	#bride-sample2
+		p
+			background: sprite($bride-icons, bride-sample2)
+
+	#bride-sample3
+		p
+			background: sprite($bride-icons, bride-sample3)
+
+	#bride-sample4
+		p
+			background: sprite($bride-icons, bride-sample4)
+
+/* *************** BOUTIQUE *************** */
+
+@media screen and (max-width: 767px)
+	#boutiqueImage		
+		margin: 0 auto
+
+	#boutique
+		.col-sm-4
+			text-align: center
+
+		.aquaBox
+			text-align: left
+
+	#boutiqueCarousel
+		margin: 20px auto 0
+		width: 100%
+
+		p
+			margin: 0 auto
+
+
+/* ****************** PRODUCTS ************** */
+@media screen and (min-width: 520px)
+	p#kerastaseLogo
+		background: sprite($products-icons, products-kerastase)
+		@include sprite-dimensions($products-icons, products-kerastase)
+
+	p#sebastianLogo
+		background: sprite($products-icons, products-sebastian)
+		@include sprite-dimensions($products-icons, products-sebastian)
+
+	p#lorealLogo
+		background: sprite($products-icons, products-loreal)
+		@include sprite-dimensions($products-icons, products-loreal)
+
+	p#macLogo
+		background: sprite($products-icons, products-mac)
+		@include sprite-dimensions($products-icons, products-mac)
+
+/* *************** CONTACT *************** */
+
+@media screen and (max-width: 767px)
+	.twoColumns
+		.twoColumns-wraper, .col-xs-12:first-child .twoColumns-wraper
+			margin: 0 auto
+			min-height: 1px
+			padding: 60px 0
+
+	#loader
+		top: 250px
+
+@media screen and (max-width: 500px)
+	#map
+		height: 365px
